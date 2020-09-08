@@ -31,6 +31,7 @@ export class MovieService {
       const response = await this.apiService.get();
       this.myMovieList.length = 0;
       this.myMovieList.push(...response);
+      console.log(this.myMovieList);
     }
 
     async saveToList(movie: any): Promise<void>{
